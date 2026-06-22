@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyCompute</title>
+    <link rel="stylesheet" href="CSS.css">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <div class="header">
+        <h1><span>Key</span>Compute</h1>
+        <div class="theme-dropdown">
+            <button class="theme-btn">Theme</button>
+            <div class="content">
+                <button class="theme-opt" onclick="setTheme('light')">Light</button>
+                <button class="theme-opt" onclick="setTheme('dark')">Dark</button>
+                <!-- <button class="theme-opt" onclick="setTheme('neon-cyber')">Cyberpunk</button> -->
+                <button class="theme-opt" onclick="setTheme('neon-matrix')">Radioactive</button>
+                <button class="theme-opt" onclick="setTheme('neon-chalk')">Chalkboard</button>
+                <button class="theme-opt" onclick="setTheme('neon-light')">Day</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="calculator">
+
+        <div class="display">
+            <input type="text" id="result" placeholder="0" readonly>
+        </div>
+
+        <div class="buttons">
+            <button class="btn action" data-key="Escape" onclick="clearDisplay()">AC</button>
+            <button class="btn action" data-key="Backspace" onclick="deleteLast()">DEL</button>
+            <button class="btn operator" data-key="%" onclick="appendCharacter('%')">%</button>
+            <button class="btn operator" data-key="/" onclick="appendCharacter('/')">/</button>
+
+            <button class="btn" data-key="7" onclick="appendCharacter('7')">7</button>
+            <button class="btn" data-key="8" onclick="appendCharacter('8')">8</button>
+            <button class="btn" data-key="9" onclick="appendCharacter('9')">9</button>
+            <button class="btn operator" data-key="*" onclick="appendCharacter('*')">*</button>
+
+            <button class="btn" data-key="4" onclick="appendCharacter('4')">4</button>
+            <button class="btn" data-key="5" onclick="appendCharacter('5')">5</button>
+            <button class="btn" data-key="6" onclick="appendCharacter('6')">6</button>
+            <button class="btn operator" data-key="-" onclick="appendCharacter('-')">-</button>
+
+            <button class="btn" data-key="1" onclick="appendCharacter('1')">1</button>
+            <button class="btn" data-key="2" onclick="appendCharacter('2')">2</button>
+            <button class="btn" data-key="3" onclick="appendCharacter('3')">3</button>
+            <button class="btn operator" data-key="+" onclick="appendCharacter('+')">+</button>
+
+            <button class="btn zero" data-key="0" onclick="appendCharacter('0')">0</button>
+            <button class="btn" data-key="." onclick="appendCharacter('.')">.</button>
+            <button class="btn equal" data-key="Enter" onclick="calculator()">=</button>
+
+        </div>
+    </div>
+</body>
+<script src="JS.js"></script>
+
+</html>

@@ -1,0 +1,258 @@
+:root {
+    --bg-body: #e0e5ec;
+    --bg-calc: #e0e5ec;
+    --key-text: #d13d7c;
+    --compute-text: rgb(28, 28, 28);
+    --theme-btn: #555;
+    --theme-hover: #bfc3c9;
+    --theme-hover-text: black;
+    --shadow-dark: #bec3c9;
+    --shadow-light: #ffffff;
+    --text-color: #555;
+    --display-text: #555;
+    --accent-color: #d13d7c;
+    --accent-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-body: #13161c;
+    --bg-calc: #1e222b;
+    --key-text: #00adb5;
+    --compute-text: rgb(215, 215, 215);
+    --theme-btn: #a0a5b5;
+    --theme-hover: #bfc3c9;
+    --theme-hover-text: black;
+    --shadow-dark: #0b0d10;
+    --shadow-light: #313746;
+    --text-color: #a0a5b5;
+    --display-text: #e3e6ed;
+    --accent-color: #00adb5;
+    --accent-text: #ffffff;
+}
+
+/* [data-theme="neon-cyber"] {
+    --bg-body: #0a0b0e;
+    --bg-calc: #14171f;
+    --key-text:#ff007f;
+    --compute-text:rgb(215, 215, 215);
+    --theme-btn:#8f9bb3;
+    --theme-hover:#bfc3c9;
+    --theme-hover-text:black;
+    --shadow-dark: #050507;
+    --shadow-light: #252a37;
+    --text-color: #8f9bb3;
+    --display-text: #00ffcc;
+    --accent-color: #ff007f;
+    --accent-text: #ffffff;
+} */
+
+[data-theme="neon-matrix"] {
+    --bg-body: #050806;
+    --bg-calc: #0d1310;
+    --key-text: #00ff66;
+    --compute-text: rgb(215, 215, 215);
+    --theme-btn: #39ff14;
+    --theme-hover: #bfc3c9;
+    --theme-hover-text: black;
+    --shadow-dark: #020403;
+    --shadow-light: #1b2620;
+    --text-color: #39ff14;
+    --display-text: #ffffff;
+    --accent-color: #00ff66;
+    --accent-text: #050806;
+}
+
+[data-theme="neon-chalk"] {
+    --bg-body: #0b1411;
+    --bg-calc: #13221d;
+    --key-text: #bd00ff;
+    --compute-text: rgb(215, 215, 215);
+    --theme-btn: #ffaa00;
+    --theme-hover: #bfc3c9;
+    --theme-hover-text: black;
+    --shadow-dark: #060b09;
+    --shadow-light: #20372f;
+    --text-color: #ffaa00;
+    --display-text: #ffffff;
+    --accent-color: #bd00ff;
+    --accent-text: #ffffff;
+}
+
+[data-theme="neon-light"] {
+    --bg-body: #f0fdf4;
+    --bg-calc: #e1fae6;
+    --key-text: #ff0055;
+    --compute-text: rgb(79, 79, 79);
+    --theme-btn: #7b00ff;
+    --theme-hover: #bfc3c9;
+    --theme-hover-text: black;
+    --shadow-dark: #bde7cb;
+    --shadow-light: #ffffff;
+    --text-color: #7b00ff;
+    --display-text: #000000;
+    --accent-color: #ff0055;
+    --accent-text: #ffffff;
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--bg-body);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header */
+
+.header h1 span {
+    color: var(--key-text);
+}
+
+.header h1 {
+    color: var(--compute-text);
+}
+
+.header {
+    width: 90%;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px;
+    font-size: 25px;
+    background: var(--bg-calc);
+    border-radius: 30px;
+    box-shadow: inset 20px 20px 60px var(--shadow-dark),
+        inset -20px -20px 60px var(--shadow-light);
+    border: 0.01px solid black;
+}
+
+/* Theme Button */
+
+
+.theme-btn {
+    border: none;
+    font-size: 25px;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--theme-btn);
+}
+
+.theme-opt {
+    border: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    letter-spacing: 1px;
+    color: var(--theme-btn);
+}
+
+.theme-opt:hover {
+    background: var(--theme-hover);
+    color: var(--theme-hover-text);
+}
+
+.theme-dropdown .content {
+    display: none;
+    background-color: var(--bg-calc);
+    position: absolute;
+    box-shadow: 2px 2px 5px black;
+    flex-direction: column;
+}
+
+.theme-dropdown:hover .content {
+    display: flex;
+}
+
+
+
+/* Calculator */
+.calculator {
+    background: var(--bg-calc);
+    padding: 25px;
+    padding-left: 17px;
+    border-radius: 30px;
+    box-shadow: 20px 20px 60px var(--shadow-dark),
+        -20px -20px 60px var(--shadow-light);
+    width: 320px;
+
+}
+
+.display {
+    margin-bottom: 25px;
+}
+
+#result {
+    width: 100%;
+    height: 60px;
+    background: var(--bg-calc);
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: inset 6px 6px 12px var(--shadow-dark),
+        inset -6px -6px 12px var(--shadow-light);
+    text-align: right;
+    padding: 0 20px;
+    font-size: 28px;
+    color: var(--display-text);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-calc);
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: 6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+    transition: all 0.2s ease;
+}
+
+.btn:active,
+.btn.pressed {
+    box-shadow: inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    transform: scale(0.98);
+}
+
+.action {
+    color: var(--accent-color);
+}
+
+.operator {
+    color: var(--accent-color);
+}
+
+.zero {
+    grid-column: span 2;
+    width: 135px;
+}
+
+.equal {
+    color: var(--accent-text);
+    background: var(--accent-color);
+}
