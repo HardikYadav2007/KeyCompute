@@ -256,3 +256,20 @@ body {
     color: var(--accent-text);
     background: var(--accent-color);
 }
+
+@media screen and (max-width:520px) {
+    h1{
+        font-size: 1.6rem;
+    }
+    .theme-btn{
+        font-size: 1.2rem;
+    }
+    .calculator{
+        margin-top: 20px;
+    }
+    .theme-dropdown .content{
+        position: absolute;
+        right: 40px;
+
+    }
+}
